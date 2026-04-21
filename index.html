@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Consulting | Conseil stratégique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* En-tête */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Section "À propos" */
+        .about {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Services (3 colonnes) */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Section contact */
+        .contact {
+            background: #f0f2f5;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: #2a5298;
+        }
+
+        /* Pied de page */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive (mobile) */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+            .services {
+                flex-direction: column;
+            }
+            .contact {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <div class="header">
+        <h1>AZ Consulting</h1>
+        <p>Stratégie · Innovation · Performance</p>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- À propos -->
+        <div class="about">
+            <h2>À propos de nous</h2>
+            <p>AZ Consulting accompagne les entreprises dans leur transformation et leur croissance. Notre approche allie expertise sectorielle et innovation pour des résultats concrets et durables.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="services">
+            <div class="service-card">
+                <h3>📊 Stratégie</h3>
+                <p>Diagnostic, feuille de route et accompagnement à la décision pour piloter votre croissance.</p>
+            </div>
+            <div class="service-card">
+                <h3>🚀 Innovation</h3>
+                <p>Accélérez votre transformation digitale avec des solutions sur mesure et agiles.</p>
+            </div>
+            <div class="service-card">
+                <h3>📈 Performance</h3>
+                <p>Optimisez vos processus et améliorez vos résultats avec nos méthodes éprouvées.</p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            <h2>Contactez-nous</h2>
+            <p>Prêt à faire passer votre projet au niveau supérieur ? Discutons de vos objectifs.</p>
+            <div class="contact-info">
+                <p>📧 <strong>Email :</strong> contact@az-consulting.fr</p>
+                <p>📱 <strong>Téléphone :</strong> +33 6 12 34 56 78</p>
+            </div>
+            <a href="mailto:contact@az-consulting.fr" class="email-link">Envoyer un message</a>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <div class="footer">
+        <p>&copy; 2025 AZ Consulting - Tous droits réservés</p>
+    </div>
+
+</body>
+</html>
