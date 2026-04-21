@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ Consulting | Conseil stratégique</title>
+    <title>AZ Consulting | Formes juridiques pour entreprises</title>
     <style>
         * {
             margin: 0;
@@ -13,193 +13,282 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F5DC;  /* Beige clair */
+            color: #3E2723;  /* Brun foncé pour texte */
             line-height: 1.6;
-            color: #333;
         }
 
         /* En-tête */
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
+            background: linear-gradient(135deg, #8B7355 0%, #6B5B3A 100%);
+            color: #F5F5DC;
+            padding: 30px 20px;
             text-align: center;
-            padding: 60px 20px;
         }
 
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            background: #F5F5DC;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box span {
+            color: #8B7355;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .logo-container h1 {
+            color: #F5F5DC;
+            font-size: 36px;
         }
 
         .header p {
-            font-size: 20px;
+            font-size: 18px;
             opacity: 0.9;
         }
 
         /* Conteneur principal */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 40px 20px;
         }
 
-        /* Section "À propos" */
-        .about {
+        /* Introduction */
+        .intro {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
+            background: #D2B48C;  /* Brun clair */
+            padding: 30px;
+            border-radius: 15px;
         }
 
-        .about h2 {
-            font-size: 32px;
-            color: #1e3c72;
-            margin-bottom: 20px;
+        .intro h2 {
+            color: #3E2723;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
-        .about p {
+        .intro p {
             font-size: 18px;
             max-width: 800px;
             margin: auto;
         }
 
-        /* Services (3 colonnes) */
-        .services {
-            display: flex;
-            flex-wrap: wrap;
+        /* Grille des cartes (formes juridiques) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
-        .service-card {
-            flex: 1;
-            min-width: 250px;
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: #1e3c72;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        .service-card p {
-            color: #666;
-        }
-
-        /* Section contact */
-        .contact {
-            background: #f0f2f5;
-            padding: 50px;
+        .card {
+            background: white;
             border-radius: 15px;
-            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #D2B48C;
         }
 
-        .contact h2 {
-            color: #1e3c72;
-            margin-bottom: 20px;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-color: #8B7355;
         }
 
-        .contact-info {
-            font-size: 18px;
-            margin-top: 20px;
+        .card-image {
+            background: #8B7355;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .contact-info p {
-            margin: 10px 0;
+        .card-image span {
+            font-size: 64px;
         }
 
-        .email-link {
-            display: inline-block;
-            background: #1e3c72;
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #8B7355;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            background: #8B7355;
             color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
             transition: background 0.3s ease;
+            width: 100%;
         }
 
-        .email-link:hover {
-            background: #2a5298;
+        .card button:hover {
+            background: #6B8E23;  /* Vert olive au survol */
         }
 
         /* Pied de page */
         .footer {
-            background: #1e3c72;
-            color: white;
+            background: #8B7355;
+            color: #F5F5DC;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             margin-top: 40px;
         }
 
-        /* Responsive (mobile) */
+        /* Responsive */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
+            .logo-container h1 {
+                font-size: 24px;
             }
-            .services {
-                flex-direction: column;
-            }
-            .contact {
-                padding: 30px 20px;
+            .intro h2 {
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- En-tête -->
+    <!-- En-tête avec logo -->
     <div class="header">
-        <h1>AZ Consulting</h1>
-        <p>Stratégie · Innovation · Performance</p>
+        <div class="logo-container">
+            <div class="logo-box">
+                <span>AZ</span>
+            </div>
+            <h1>AZ Consulting</h1>
+        </div>
+        <p>Expertise en création d'entreprise et formes juridiques</p>
     </div>
 
-    <!-- Contenu principal -->
     <div class="container">
-        <!-- À propos -->
-        <div class="about">
-            <h2>À propos de nous</h2>
-            <p>AZ Consulting accompagne les entreprises dans leur transformation et leur croissance. Notre approche allie expertise sectorielle et innovation pour des résultats concrets et durables.</p>
+        <!-- Introduction -->
+        <div class="intro">
+            <h2>📋 Choisissez la forme juridique de votre entreprise</h2>
+            <p>Cliquez sur n'importe quelle carte pour découvrir en détail ses spécificités, ses avantages et ses obligations.</p>
         </div>
 
-        <!-- Services -->
-        <div class="services">
-            <div class="service-card">
-                <h3>📊 Stratégie</h3>
-                <p>Diagnostic, feuille de route et accompagnement à la décision pour piloter votre croissance.</p>
+        <!-- Grille des formes juridiques -->
+        <div class="grid" id="cardsGrid">
+            <!-- Carte 1 : EURL -->
+            <div class="card" data-juridique="eurl">
+                <div class="card-image">
+                    <span>🏢</span>
+                </div>
+                <div class="card-content">
+                    <h3>EURL</h3>
+                    <p>Entreprise Unipersonnelle à Responsabilité Limitée. Idéale pour un entrepreneur seul.</p>
+                    <button>En savoir plus →</button>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>🚀 Innovation</h3>
-                <p>Accélérez votre transformation digitale avec des solutions sur mesure et agiles.</p>
-            </div>
-            <div class="service-card">
-                <h3>📈 Performance</h3>
-                <p>Optimisez vos processus et améliorez vos résultats avec nos méthodes éprouvées.</p>
-            </div>
-        </div>
 
-        <!-- Contact -->
-        <div class="contact">
-            <h2>Contactez-nous</h2>
-            <p>Prêt à faire passer votre projet au niveau supérieur ? Discutons de vos objectifs.</p>
-            <div class="contact-info">
-                <p>📧 <strong>Email :</strong> contact@az-consulting.fr</p>
-                <p>📱 <strong>Téléphone :</strong> +33 6 12 34 56 78</p>
+            <!-- Carte 2 : SARL -->
+            <div class="card" data-juridique="sarl">
+                <div class="card-image">
+                    <span>👥</span>
+                </div>
+                <div class="card-content">
+                    <h3>SARL</h3>
+                    <p>Société à Responsabilité Limitée. Parfaite pour 2 à 100 associés.</p>
+                    <button>En savoir plus →</button>
+                </div>
             </div>
-            <a href="mailto:contact@az-consulting.fr" class="email-link">Envoyer un message</a>
+
+            <!-- Carte 3 : SASU -->
+            <div class="card" data-juridique="sasu">
+                <div class="card-image">
+                    <span>⚡</span>
+                </div>
+                <div class="card-content">
+                    <h3>SASU</h3>
+                    <p>Société par Actions Simplifiée Unipersonnelle. Flexibilité maximale pour un seul associé.</p>
+                    <button>En savoir plus →</button>
+                </div>
+            </div>
+
+            <!-- Carte 4 : SAS -->
+            <div class="card" data-juridique="sas">
+                <div class="card-image">
+                    <span>🚀</span>
+                </div>
+                <div class="card-content">
+                    <h3>SAS</h3>
+                    <p>Société par Actions Simplifiée. Idéale pour les startups et projets collaboratifs.</p>
+                    <button>En savoir plus →</button>
+                </div>
+            </div>
+
+            <!-- Carte 5 : Micro-entreprise -->
+            <div class="card" data-juridique="micro">
+                <div class="card-image">
+                    <span>✨</span>
+                </div>
+                <div class="card-content">
+                    <h3>Micro-entreprise</h3>
+                    <p>Régime simplifié pour les petits revenus. Zéro frais de création.</p>
+                    <button>En savoir plus →</button>
+                </div>
+            </div>
+
+            <!-- Carte 6 : EI -->
+            <div class="card" data-juridique="ei">
+                <div class="card-image">
+                    <span>👤</span>
+                </div>
+                <div class="card-content">
+                    <h3>EI</h3>
+                    <p>Entreprise Individuelle. Responsabilité illimitée mais gestion ultra-simple.</p>
+                    <button>En savoir plus →</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Pied de page -->
     <div class="footer">
-        <p>&copy; 2025 AZ Consulting - Tous droits réservés</p>
+        <p>&copy; 2025 AZ Consulting - Guide des formes juridiques</p>
+        <p style="font-size: 14px; margin-top: 10px;">Cliquez sur une carte pour découvrir tous les détails</p>
     </div>
+
+    <script>
+        // Script pour la redirection vers les pages détaillées
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Évite de déclencher deux fois si on clique sur le bouton
+                if(e.target.tagName === 'BUTTON') {
+                    e.stopPropagation();
+                }
+                const type = card.getAttribute('data-juridique');
+                window.location.href = `${type}.html`;
+            });
+        });
+    </script>
 
 </body>
 </html>
